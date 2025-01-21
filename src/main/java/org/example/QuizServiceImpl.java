@@ -11,7 +11,7 @@ public class QuizServiceImpl implements QuizService{
             " a) William Shakespeare\n b) Charles Dickens \n c) Jane Austen \n d) J.K. Rowling\n"};
 
 
-    String[] questions ={"Who wrote 'Romeo and Juliet?", "What is the capital of France?"};
+    String[] questions ={"What is the capital of France?", "Who wrote 'Romeo and Juliet?"};
 
     String[] correctAnswer = {
             "a",
@@ -31,7 +31,7 @@ public class QuizServiceImpl implements QuizService{
            trackScore(obj);
 
         }
-        System.out.println("You got "+score);
+        System.out.println("You got " + score + " out of 2 questions");
     }
 
     @Override
@@ -43,7 +43,7 @@ public class QuizServiceImpl implements QuizService{
 
     @Override
     public void trackScore(QuizModel quizModel){
-        if(answer.equals(quizModel.getCorrectAnswer())){
+        if(answer.toLowerCase().equals(quizModel.getCorrectAnswer())){
             score++;
         }
     }
