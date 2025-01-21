@@ -28,7 +28,7 @@ public class QuizServiceImpl implements QuizService{
             System.out.println(obj.getOptions());
 
            this.answer =  getUserInput();
-           trackScore(i);
+           trackScore(obj);
 
         }
         System.out.println("You got "+score);
@@ -42,8 +42,8 @@ public class QuizServiceImpl implements QuizService{
     }
 
     @Override
-    public void trackScore(int questionIndex){
-        if(answer.equals(correctAnswer[questionIndex])){
+    public void trackScore(QuizModel quizModel){
+        if(answer.equals(quizModel.getCorrectAnswer())){
             score++;
         }
     }

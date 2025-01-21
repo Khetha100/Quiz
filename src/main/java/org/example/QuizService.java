@@ -5,7 +5,7 @@ public interface QuizService {
 
     public String getUserInput();
 
-    public void trackScore(int questionIndex);
+    public void trackScore(QuizModel quizModel);
 
 
 }
