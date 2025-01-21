@@ -26,10 +26,10 @@ public class QuizServiceImpl implements QuizService{
             QuizModel obj =  new QuizModel(questions[i], allOptions[i], correctAnswer[i]);
             System.out.println(obj.getQuestion());
             System.out.println(obj.getOptions());
+            System.out.print("Enter 'a' or 'b' or 'c' or 'd': ");
 
            this.answer =  getUserInput();
            trackScore(obj);
-
         }
         System.out.println("You got " + score + " out of 2 questions");
     }
